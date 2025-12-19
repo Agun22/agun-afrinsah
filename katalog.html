@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Rempah Indonesia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="catalog-page">
+
+    <header>
+        <div class="logo">Warisan Rempah Indonesia</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="katalog.html" class="active">Katalog Rempah</a></li>
+                <li><a href="tentang.html">Tentang Kami</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+<section class="video-banner">
+    <video id="katalogVideo" loop playsinline>
+        <source src="video/Teaser Jalur Rempah RI.mp4" type="video/mp4">
+    </video>
+
+    <button id="soundBtn">Aktifkan Suara</button>
+
+    
+    
+</section>
+
+
+    <main>
+        <h1>Katalog Rempah-Rempah Indonesia</h1>
+
+        
+       <input type="text" id="searchInput" onkeyup="searchSpices()" placeholder="Cari rempah (Jahe, Kunyit, Cengkeh, dll.)...">
+
+
+        
+        <div class="spice-grid" id="spiceGrid">
+            
+            
+            <div class="spice-card" id="cengkeh">
+                <img src="gambar/cengkeh.jpg" alt="Cengkeh">
+                <h3>Cengkeh</h3>
+                <p>Berasal dari Maluku, terkenal karena aroma khasnya yang kuat. Digunakan dalam rokok kretek dan masakan manis.</p>
+                <a href="cengkeh.html">Detail</a>
+            </div>
+            
+            <div class="spice-card" id="pala">
+                <img src="gambar/pala.jpg" alt="Pala">
+                <h3>Pala</h3>
+                <p>Tanaman asli Banda yang bijinya digunakan sebagai bumbu utama untuk semur, sup, dan kue tradisional.</p>
+                <a href="pala.html">Detail</a>
+            </div>
+            
+            <div class="spice-card" id="jahe">
+                <img src="gambar/jahe.jpg" alt="Jahe">
+                <h3>Jahe</h3>
+                <p>Rimpang yang sering digunakan sebagai minuman penghangat dan bumbu dasar untuk berbagai masakan pedas.</p>
+                <a href="jahe.html">Detail</a>
+            </div>
+
+            <div class="spice-card" id="kunyit">
+                <img src="gambar/kunyit.jpg" alt="Kunyit">
+                <h3>Kunyit</h3>
+                <p>Pewarna alami kuning dan bahan utama dalam jamu serta masakan kari dan gulai.</p>
+                <a href="kunyit.html">Detail</a>
+            </div>
+
+            <div class="spice-card" id="lada">
+                <img src="gambar/lada.jpg" alt="Lada">
+                <h3>Lada/Merica</h3>
+                <p>Salah satu rempah paling banyak diekspor dari Lampung. Memberikan rasa pedas yang tajam.</p>
+                <a href="lada.html">Detail</a>
+            </div>
+            
+            <div class="spice-card" id="kayumanis">
+                <img src="gambar/kayu manis.jpg" alt="Kayu Manis">
+                <h3>Kayu Manis</h3>
+                <p>Kulit kayu manis yang memberikan aroma manis dan hangat, sering digunakan dalam kue dan minuman.</p>
+                <a href="kayumanis.html">Detail</a>
+            </div>
+
+            <div class="spice-card" id="kapulaga">
+                <img src="gambar/kapulaga.jpg" alt="Kapulaga">
+                <h3>Kapulaga</h3>
+                <p>Sering ditemukan dalam campuran bumbu gulai dan masakan timur tengah yang kaya rasa.</p>
+                <a href="kapulaga.html">Detail</a>
+            </div>
+
+             <div class="spice-card" id="kemiri">
+                <img src="gambar/kemiri.jpg" alt="Kemiri">
+                <h3>Kemiri</h3>
+                <p>Biji yang digunakan untuk mengentalkan bumbu masakan dan memberikan rasa gurih alami.</p>
+                <a href="kemiri.html">Detail</a>
+            </div>
+
+             
+            
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;  2025 Proyek Tugas Akhir Pemrograman Web 1 agun afriansah</p>
+    </footer>
+
+    
+    <script>
+        function searchSpices() {
+            
+            var input, filter, grid, cards, h3, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            grid = document.getElementById("spiceGrid");
+            cards = grid.getElementsByClassName('spice-card'); 
+
+            
+            for (i = 0; i < cards.length; i++) {
+                h3 = cards[i].getElementsByTagName("h3")[0];
+                
+                txtValue = h3.textContent || h3.innerText || cards[i].id;
+                
+                
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+<script>
+    const video = document.getElementById("katalogVideo");
+    const btn = document.getElementById("soundBtn");
+
+    btn.addEventListener("click", () => {
+        video.volume = 1;
+        video.muted = false;
+        video.play();
+        btn.style.display = "none"; 
+    });
+</script>
+
+
+<body class="catalog-page">
+
+</html>

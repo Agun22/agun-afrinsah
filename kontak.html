@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami - Rempah Indonesia</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS tambahan untuk formulir -->
+    <style>
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        .btn-submit {
+            background-color: #e65100;
+            color: white;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .btn-submit:hover {
+            background-color: #ff6f00;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Warisan Rempah Indonesia</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="katalog.html">Katalog Rempah</a></li>
+                <li><a href="tentang.html">Tentang Kami</a></li>
+                <li><a href="kontak.html" class="active">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Hubungi Kami</h1>
+        <p>Jika Anda memiliki pertanyaan mengenai rempah-rempah atau proyek ini, silakan hubungi kami melalui formulir di bawah ini.</p>
+
+        <!-- Form action="#" hanya sebagai placeholder untuk tugas PW 1 statis -->
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Alamat Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="pesan">Pesan Anda:</label>
+                <textarea id="pesan" name="pesan" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Kirim Pesan</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Proyek Tugas Akhir Pemrograman Web 1 | [Nama Anda/NIM Anda]</p>
+    </footer>
+
+</body>
+</html>
